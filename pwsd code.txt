@@ -1,0 +1,31 @@
+//enter the username and retry the password upto 3 times
+#include <stdio.h>
+
+int main() {
+    int a, b;
+    int attempts = 0;
+    int maxAttempts = 3;
+    printf("Enter a: ");//a=username
+    scanf("%d", &a);
+    if (a == 123) {
+        printf("Correct a\n");
+    } else {
+        printf("Wrong a\n");
+    }
+     while (attempts < maxAttempts) {
+        printf("Enter b: ");//b==username
+        scanf("%d", &b);
+        if (b == 456) {
+            printf("Correct b\n");
+            break; 
+        } else {
+            printf("Wrong b. Try again.\n");
+            attempts++;
+        }
+    }
+    if (attempts == maxAttempts) {
+        printf("Maximum attempts reached\n");
+    }
+}
+
+
